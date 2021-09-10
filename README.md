@@ -1,0 +1,4 @@
+In this project, we have implemented real-time tacker that can detect whether people are wearing mask or not and classify the gender of the people. We have used pre-trained models for mask detection and gender classification.
+For masks, mask Net is used which is formed by fine-tuning of Mobile Net V2 architecture. For this purpose, Mobile net with pre trained weights on IMAGENET dataset is used after fine tuning(training). Mobile Net can be applied to embedded devices with limited computational capacity (ex., Raspberry Pi, Google Coral, NVIDIA Jetson Nano, etc.)
+
+For Gender Prediction,load the gender network (pre-trained model) into memory and pass the detected face through the network. The forward pass gives the probabilities or confidence of the two classes. We take the max of the two outputs and use it as the final gender prediction.
